@@ -1,0 +1,27 @@
+{
+  "name": "next13",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel --no-daemon",
+    "todo": "turbo run dev --parallel --no-daemon --filter=todo-api... --filter=todo-web...",
+    "auth": "turbo run dev --parallel --no-daemon --filter=auth13... ",
+    "auth:prisma": "turbo run dev --parallel --no-daemon --filter=auth-prisma... ",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "turbo": "^1.7.4"
+  },
+  "engines": {
+    "pnpm": ">=7.27.0",
+    "node": ">=18.0.0"
+  },
+  "packageManager": "pnpm@7.27.0"
+}
